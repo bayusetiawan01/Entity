@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,12 +80,16 @@ WSGI_APPLICATION = 'entity.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dfgcju185gfjtq',
+        'HOST': 'ec2-52-44-31-100.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'htjoxrmweksnqt',
+        'PASSWORD': 'c326a5c839bdf3c740c3e63b1b599378358bf75b9d62a330d7a46acc60cc004c',
+        'CONN_MAX_AGE': 500,
     }
 }
-
-
+# postgres: // htjoxrmweksnqt: c326a5c839bdf3c740c3e63b1b599378358bf75b9d62a330d7a46acc60cc004c@ec2-52-44-31-100.compute-1.amazonaws.com: 5432/dfgcju185gfjtq
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
