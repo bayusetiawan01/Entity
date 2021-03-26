@@ -3,18 +3,21 @@ import string
 import random
 
 
-def generate_unique_code():
-    length = 6
-    while True:
-        code = ''.join(random.choices(string.ascii_uppercase, k=length))
-        if Event.objects.filter(code=code).count() == 0:
-            break
-    return code
-
-
 class Event(models.Model):
-    code = models.CharField(max_length=8, default="", unique=True)
     judul = models.CharField(max_length=50, unique=True)
-    gambar = models.CharField(max_length=50)
-    deskripsi = models.CharField(max_length=1024)
-    created_at = models.DateTimeField(auto_now_add=True)
+    gambar = models.CharField(max_length=50, blank=True, null=True)
+    deskripsi = models.CharField(max_length=1024, blank=True, null=True)
+    dd_date = models.DateTimeField(auto_now_add=True)
+
+
+class Pendaftaran(models.Model):
+    nama = models.CharField(max_length=50)
+    npm = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    motivasi = models.CharField(max_length=1024, blank=True, null=True)
+    menjadi_pengurus = models.BooleanField(null=False, default=1)
+    minat = models.CharField(max_length=50, blank=True, null=True)
+    hari = models.CharField(max_length=50, blank=True, null=True)
+    bahasa = models.CharField(max_length=50, blank=True, null=True)
+    harapan = models.CharField(max_length=50, blank=True, null=True)
+    dd_date = models.DateTimeField(auto_now_add=True)
