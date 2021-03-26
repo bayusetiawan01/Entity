@@ -13,7 +13,7 @@ class EventView(generics.ListAPIView):
     serializer_class = EventSerializer
 
 
-class PendaftaranView(generics.ListAPIView):
+class PendaftaranView(generics.CreateAPIView):
     queryset = Pendaftaran.objects.all()
     serializer_class = PendaftaranSerializer
 

@@ -12,11 +12,11 @@ class PendaftaranSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pendaftaran
         fields = ('id', 'nama', 'npm', 'email', 'motivasi', 'menjadi_pengurus',
-                  'minat', 'hari', 'bahasa', 'harapan', 'dd_date')
+                  'minat1', 'minat2', 'hari', 'bahasa', 'harapan', 'dd_date')
 
 
 class CreatePendaftaranSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pendaftaran
         fields = ('nama', 'npm', 'email', 'motivasi', 'menjadi_pengurus',
-                  'minat', 'hari', 'bahasa', 'harapan')
+                  'minat1', 'minat2', 'hari', 'bahasa', 'harapan')
