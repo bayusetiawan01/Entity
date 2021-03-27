@@ -9,3 +9,7 @@ def index(request, *args, **kwargs):
 
 def pendaftaran(request, *args, **kwargs):
     return render(request, 'frontend/pendaftaran.html')
+
+
+def pendaftaranSukses(request, *args, **kwargs):
+    return render(request, 'frontend/pendaftaransukses.html')

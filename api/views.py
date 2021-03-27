@@ -4,6 +4,7 @@ from .serializers import EventSerializer, PendaftaranSerializer, CreatePendaftar
 from .models import Event, Pendaftaran
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -16,6 +17,10 @@ class EventView(generics.ListAPIView):
 class PendaftaranView(generics.CreateAPIView):
     queryset = Pendaftaran.objects.all()
     serializer_class = PendaftaranSerializer
+
+    def post(self, *args, **kwargs):
+        super().post(*args, **kwargs)
+        return HttpResponseRedirect(redirect_to='/pendaftaran-berhasil')
 
 
 class CreatePendaftaranView(APIView):
