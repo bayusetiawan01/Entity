@@ -22,6 +22,9 @@ class PendaftaranView(generics.CreateAPIView):
         super().post(*args, **kwargs)
         return HttpResponseRedirect(redirect_to='/pendaftaran-berhasil')
 
+class HasilPendaftaranView(generics.ListAPIView):
+    queryset = Pendaftaran.objects.all()
+    serializer_class = PendaftaranSerializer
 
 class CreatePendaftaranView(APIView):
     serializer_class = CreatePendaftaranSerializer
