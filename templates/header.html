@@ -50,31 +50,31 @@
                 <div class="nav-wrapper">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="../home">
+                            <a class="nav-link {% if cat == 'home' %} active {% endif %}" href="../home">
                                 <i class="material-icons">edit</i>
                                 <span>Home</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="../blog">
+                            <a class="nav-link {% if cat == 'blog' %} active {% endif %}" href="../blog">
                                 <i class="material-icons">vertical_split</i>
                                 <span>Blog</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="../enclass">
+                            <a class="nav-link {% if cat == 'enclass' %} active {% endif %}" href="../enclass">
                                 <i class="material-icons">view_module</i>
                                 <span>Enclass</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="../kompeten">
+                            <a class="nav-link {% if cat == 'kompeten' %} active {% endif %}" href="../kompeten">
                                 <i class="material-icons">note_add</i>
                                 <span>Kompeten</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="../about">
+                            <a class="nav-link {% if cat == 'about' %} active {% endif %}" href="../about">
                                 <i class="material-icons">error</i>
                                 <span>About</span>
                             </a>
