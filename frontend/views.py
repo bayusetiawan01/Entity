@@ -30,3 +30,10 @@ def mainCategories(request, maincat, *args, **kwargs):
         return render(request, 'frontend/enclass.html', {'cat': maincat})
     elif maincat == "kompeten":
         return render(request, 'frontend/kompeten.html', {'cat': maincat})
+
+
+def subCategories(request, subcat, *args, **kwargs):
+    return render(request, 'frontend/enclasspage.html', {
+        'cat': 'enclass',
+        'subcat': subcat
+    })

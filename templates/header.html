@@ -15,6 +15,26 @@
         href="{% static 'admin/styles/shards-dashboards.1.1.0.min.css' %}">
     <link rel="stylesheet" href="{% static 'admin/styles/extras.1.1.0.min.css' %}">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+        .containeriframe {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        }
+
+        /* Then style the iframe to fit in the container div with full height and width */
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body class="h-100">
@@ -50,31 +70,31 @@
                 <div class="nav-wrapper">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link {% if cat == 'home' %} active {% endif %}" href="../home">
+                            <a class="nav-link {% if cat == 'home' %} active {% endif %}" href="/home">
                                 <i class="material-icons">edit</i>
                                 <span>Home</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if cat == 'blog' %} active {% endif %}" href="../blog">
+                            <a class="nav-link {% if cat == 'blog' %} active {% endif %}" href="/blog">
                                 <i class="material-icons">vertical_split</i>
                                 <span>Blog</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if cat == 'enclass' %} active {% endif %}" href="../enclass">
+                            <a class="nav-link {% if cat == 'enclass' %} active {% endif %}" href="/enclass">
                                 <i class="material-icons">view_module</i>
                                 <span>Enclass</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if cat == 'kompeten' %} active {% endif %}" href="../kompeten">
+                            <a class="nav-link {% if cat == 'kompeten' %} active {% endif %}" href="/kompeten">
                                 <i class="material-icons">note_add</i>
                                 <span>Kompeten</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if cat == 'about' %} active {% endif %}" href="../about">
+                            <a class="nav-link {% if cat == 'about' %} active {% endif %}" href="/about">
                                 <i class="material-icons">error</i>
                                 <span>About</span>
                             </a>
@@ -105,38 +125,9 @@
                                     aria-expanded="false">
                                     <div class="nav-link-icon__wrapper">
                                         <i class="material-icons">&#xE7F4;</i>
-                                        <span class="badge badge-pill badge-danger">2</span>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-small" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">
-                                        <div class="notification__icon-wrapper">
-                                            <div class="notification__icon">
-                                                <i class="material-icons">&#xE6E1;</i>
-                                            </div>
-                                        </div>
-                                        <div class="notification__content">
-                                            <span class="notification__category">Analytics</span>
-                                            <p>Your website’s active users count increased by
-                                                <span class="text-success text-semibold">28%</span> in the last week.
-                                                Great job!
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <div class="notification__icon-wrapper">
-                                            <div class="notification__icon">
-                                                <i class="material-icons">&#xE8D1;</i>
-                                            </div>
-                                        </div>
-                                        <div class="notification__content">
-                                            <span class="notification__category">Sales</span>
-                                            <p>Last week your store’s sales count decreased by
-                                                <span class="text-danger text-semibold">5.52%</span>. It could have been
-                                                worse!
-                                            </p>
-                                        </div>
-                                    </a>
                                     <a class="dropdown-item notification__all text-center" href="#"> View all
                                         Notifications </a>
                                 </div>

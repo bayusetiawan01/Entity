@@ -7,4 +7,5 @@ urlpatterns = [
     path('pendaftaran-berhasil/', pendaftaranSukses),
     path('<str:maincat>/', mainCategories),
     path('about/struktur-organisasi/', strukturOrganisasi),
+    path('enclass/<str:subcat>/', subCategories),
 ]
