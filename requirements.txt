@@ -62,6 +62,6 @@ termcolor==1.1.0
 toml==0.10.1
 urllib3==1.26.5
 webencodings==0.5.1
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 whitenoise==5.2.0
 wrapt==1.12.1
